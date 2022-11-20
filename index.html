@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Generator by Sidharth H</title>
+        <link rel="icon" type="image/svg" href="favicon.svg">
+    </head>
+    <body>
+        <h1>Generate a <br><span class="highlight">random password</span></h1>
+        <p class="subtitle">Never use an insecure password again.</p>
+         
+        <!-- Settings -->
+        <fieldset>
+            <legend>Settings: </legend>
+            
+            <!-- Password length slider -->
+            <div class="slider">
+                <input id="range" type="range" min="4" max="20" value="8" oninput="rangeValue.innerText = this.value">
+                <p>Password length: <span id="rangeValue">8</span></p>
+            </div>
+            
+            <div class="checkbox-container">
+                <div>
+                    <input type="checkbox" id="uppercase" checked="true" oninput="this.value = !this.checked">
+                    <label for="uppercase"> Uppercase</label><br>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="lowercase" checked="true" oninput="this.value = !this.checked">
+                    <label for="lowercase"> Lowercase</label><br>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="numbers" checked="true" oninput="this.value = !this.checked">
+                    <label for="numbers"> Numbers</label><br>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="symbols" checked="true" oninput="this.value = !this.checked">
+                    <label for="symbols"> Symbols</label><br>
+                </div>
+            </div>
+            
+            
+        </fieldset>
+        
+        <button class="generate-passwd">Generate passwords</button>
+        <br>
+        <hr>
+        
+        <div class="password-fields">
+            
+            <!-- Password 1 box -->
+            <div class="password-field1">
+                <button id="pass1" class="password-box password1" title="Click to copy password to clipboard"></button>
+                <p class="p1-copied-text">Copied to clipboard</p>
+            </div>
+            
+            <!-- Password 2 box -->
+            <div class="password-field2">
+                <button id="pass2" class="password-box password2" title="Click to copy password to clipboard"></button>
+                <p class="p2-copied-text">Copied to clipboard</p>
+            </div>
+            
+        </div>
+        
+        <footer>
+            <p>Coded by <a href="https://www.tenocijam.in">Sidharth H</a></p>
+        </footer>        
+        
+        <script src="index.js"></script>
+        
+    </body>
+</html>
